@@ -1,0 +1,12 @@
+model_name: unetformer
+model_hparams:
+  activation: relu
+  classes: 2
+optimizer_name: Adam
+optimizer_hparams:
+  lr: 0.01
+  weight_decay: 0.0001
+lr_scheduler_name: plateau
+lr_scheduler_hparams:
+  lr_scheduler_patience: 5
+  lr_scheduler_gamma: 0.5

@@ -1,0 +1,23 @@
+model_name: SaltFormer
+model_hparams:
+  encoder_name: mit_b0
+  activation: softmax2d
+  classes: 2
+  decoder_attention_type: scse
+optimizer_name: Adam
+optimizer_hparams:
+  lr: 0.00004
+  betas: 
+    - 0.9
+    - 0.999
+  weight_decay: 0.01
+loss_hparams:
+  alpha: 0.98
+  gamma: 2
+  delta: 0.08
+  mu: 0.02
+  epsilon: 0.9
+lr_scheduler_name: plateau
+lr_scheduler_hparams:
+  lr_scheduler_patience: 4
+  lr_scheduler_gamma: 0.6

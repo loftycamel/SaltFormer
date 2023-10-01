@@ -1,0 +1,15 @@
+model_name: SaltDDN
+model_hparams:
+  encoder_name: resnet101
+  densenet_num_layers: [6,12,24,16]
+  densenet_bn_size: 4
+  densenet_growth_rate: 16
+  decoder_channels: 512
+  classes: 2
+optimizer_name: Adam
+optimizer_hparams:
+  lr: 0.1
+  weight_decay: 0.001
+lr_scheduler_name: noam
+lr_scheduler_hparams:
+  lr_scheduler_warmup: 10

@@ -1,0 +1,16 @@
+model_name: unet
+model_hparams:
+  encoder_name: resnet101
+  activation: softmax2d
+  classes: 2
+optimizer_name: Adam
+optimizer_hparams:
+  lr: 0.001
+  betas: 
+    - 0.9
+    - 0.999
+  weight_decay: 0.001
+lr_scheduler_name: plateau
+lr_scheduler_hparams:
+  lr_scheduler_patience: 8
+  lr_scheduler_gamma: 0.6
